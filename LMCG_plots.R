@@ -41,6 +41,7 @@ LMCG_long %>%
   #geom_smooth(method=lm ,  color="transparent", fill="skyblue2", se=TRUE, formula = y ~ x, level=conf_level, fullrange =T)+
   # geom_hline(yintercept = 6, linetype= "dashed", col = "red3", size=1)+
   geom_hline(yintercept = 1, linetype= "dashed", col = "red3", size=1)+
+  geom_hline(yintercept = 0.5, linetype= 3, col = "orange3", size=1)+
   geom_point(aes(col=temp), size=2)+
   geom_line(aes(col=temp), linewidth =2, alpha=0.5)+
   #geom_line(data = conf_table1, aes(newx, upr), linetype= "longdash", col = "skyblue3", size=1)+
