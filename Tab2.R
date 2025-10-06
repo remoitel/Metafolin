@@ -24,7 +24,8 @@ LMCG_tab <- LMCG  %>%
   # rename("5-MeTHFA-Ca water free" = "5-MeTHFA-Ca water free calc" ) %>% 
   # relocate("5-MeTHFA-Ca water free",  .after = "5-MeTHFA-Ca") %>% 
   mutate(across(6:26, ~ as.numeric(.))) %>%
-  mutate(across(6:26, ~ round_half_up(., 3))) %>% 
+  mutate(across(6:7, ~ round_half_up(., 2))) %>% 
+  mutate(across(8:26, ~ round_half_up(., 3))) %>% 
   group_by(Batch) %>% 
   arrange(Batch, inert, temp , month)
 
